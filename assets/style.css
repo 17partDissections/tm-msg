@@ -1,6 +1,16 @@
-﻿* { box-sizing: border-box; }
+﻿@font-face {
+	font-family: "font";
+	src: url("sazanami-gothic.ttf") format("truetype");
+	unicode-range: U+0000-024F;
+}
 
-@font-face { font-family: "Font"; src: url("sazanami-gothic.ttf") format("truetype"); }
+@font-face {
+	font-family: "font";
+	src: url("alt_ru.ttf") format("truetype");
+	unicode-range: U+0400-04FF, U+0500-052F;
+}
+
+* { box-sizing: border-box; }
 
 html { scrollbar-width: none; }
 
@@ -110,7 +120,7 @@ select {
 	color: #ffffff;
 	position: absolute;
 	z-index: 3;
-	font-family: "Font", monospace;
+	font-family: "font", monospace;
 }
 
 .headline {
