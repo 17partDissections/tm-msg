@@ -148,15 +148,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 message => typeof message === 'string' && message.trim().length > 0
             );
 
-            if (validMessages.length === 0) {
-                throw new Error('No valid messages found');
-            }
-
             const randomIndex = Math.floor(Math.random() * validMessages.length);
             const randomMessage = validMessages[randomIndex];
 
             mainTextInput.value = randomMessage;
             updateMainText();
+
+            const randomBgIndex = Math.floor(Math.random() * bgSelect.options.length);
+            bgSelect.selectedIndex = randomBgIndex;
+            updateBackground();
+
+            const randomChIndex = Math.floor(Math.random() * chSelect.options.length);
+            chSelect.selectedIndex = randomChIndex;
+            updateCharacter();
     }
 
     bgSelect.addEventListener('change', updateBackground);
